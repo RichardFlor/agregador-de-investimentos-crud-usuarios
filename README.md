@@ -37,23 +37,23 @@ A API poderá ser acessada em [localhost:8080](http://localhost:8080).
 ## API Endpoints
 
 
-- Criar Tarefa 
+- Criar Usuario 
 ```
 $ http POST :8080/v1/users
-[
-  {
+
+{
     "username": "Teste",
     "email": "teste@gmail.com",
     "password": "123"
 }
-]
+
 ```
 
-- Listar Tarefas
+- Listar Usuario
 ```
 $ http GET :8080/v1/users
 
-[
+
  {
       "userId": "eed48960-3b33-43a0-9973-c6f2379a744a",
       "username": "Teste",
@@ -62,26 +62,41 @@ $ http GET :8080/v1/users
       "creationTimestamp": "2025-02-12T16:11:41.145879Z",
       "updateTimestamp": "2025-02-12T16:11:41.145879Z"
   }
-]
+
+```
+- Listar Usuario por Id
+```
+$ http GET :8080/v1/users/eed48960-3b33-43a0-9973-c6f2379a744a
+
+
+{
+    "userId": "eed48960-3b33-43a0-9973-c6f2379a744a",
+    "username": "Teste",
+    "email": "teste@gmail.com",
+    "password": "123",
+    "creationTimestamp": "2025-02-12T16:11:41.145879Z",
+    "updateTimestamp": "2025-02-12T16:11:41.145879Z"
+}
+
 ```
 
-- Atualizar Tarefa
+
+- Atualizar Usuario
 ```
 $ http PUT :8080/v1/users/eed48960-3b33-43a0-9973-c6f2379a744a
 
-[
+
   {
 
       "username": "Teste 2 ",
       "email": "teste2@gmail.com",
       "password": "456"
   }
-]
+
 ```
 
-- Remover Tarefa
+- Remover Usuario
 ```
 http DELETE :8080/v1/users/eed48960-3b33-43a0-9973-c6f2379a744a
 
-[ ]
 ```
